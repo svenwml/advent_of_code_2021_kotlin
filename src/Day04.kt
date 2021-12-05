@@ -87,7 +87,7 @@ fun main() {
         return updated_bingo_boards
     }
 
-    // Checks the passed bingo lists for a "bingo" (completely marked row or column.
+    // Checks the passed bingo lists for a "bingo" (completely marked row or column).
     // Returns a list of the boards having a "bingo".
     fun check_bingo(input: MutableList<MutableList<MutableList<Int>>>) : List<Int>
     {
