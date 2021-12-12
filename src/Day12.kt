@@ -137,7 +137,7 @@ fun main() {
 
         for(route in routes)
         {
-            if (route.lastOrNull() == "end" && route.first() == "start")
+            if (route.lastOrNull() == "end")
             {
                 valid_routes.add(route)
             }
