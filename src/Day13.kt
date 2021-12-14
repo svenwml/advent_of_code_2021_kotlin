@@ -1,6 +1,6 @@
 fun main() {
 
-    fun do_folding(input: List<String>, return_number_of_dots_after_first_fold : Boolean) : Int
+    fun do_folding(input: List<String>, return_number_of_dots_after_first_fold : Boolean, print_result: Boolean) : Int
     {
         // Get the dimensions of the required matrix first.
 
@@ -153,27 +153,31 @@ fun main() {
             }
         }
 
-        print_map()
+        if(print_result)
+        {
+            print_map()
+        }
 
         return count_dots()
     }
 
     fun part1(input: List<String>) : Int {
 
-        return do_folding(input, true)
+        return do_folding(input, true, false)
     }
 
-    fun part2(input: List<String>) : Int {
+    fun part2(input: List<String>, print_result: Boolean) : Int {
 
-        return do_folding(input,false)
+        return do_folding(input,false, print_result)
     }
 
     val testInput = readInput("Day13_test")
 
     check(part1(testInput) == 17)
+    check(part2(testInput, false) == 16)
 
     val input = readInput("Day13")
 
     println(part1(input))
-    println(part2(input))
+    println(part2(input, true))
 }
