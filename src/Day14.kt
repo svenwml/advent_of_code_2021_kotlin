@@ -100,6 +100,6 @@ fun main() {
 
     val input = readInput("Day14")
 
-    println(part1(testInput))
-    println(part2(testInput))
+    println(part1(input))
+    println(part2(input))
 }
